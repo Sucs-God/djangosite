@@ -1,0 +1,167 @@
+{% extends 'main/use/base_guest.html' %}
+{% load static %}
+
+
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mx-auto">
+				<div class="warning">
+					<div class="warning__text">
+						Все книги предоставлены исключительно с целью ознакомления
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+		
+
+
+	<section id="content" class="content">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="bread__crumb">
+						<div class="container">
+							
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb">
+											<li class="breadcrumb-item" aria-current="page"><a href="{% url 'main' %}">Главная</a></li>
+											<li class="breadcrumb-item" aria-current="page"><a href="{% url 'catalog' %}">Каталог книг</a></li>
+											{% if book.sections_id == 1 %}
+                                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'section_url' book.sections.url %}">Для начинающих</a></li>
+											{% elif book.sections_id == 2 %}
+                                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'section_url' book.sections.url %}">Для продвинутых</a></li>
+											{% elif book.sections_id == 3 %}
+                                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'section_url' book.sections.url %}">Справочники</a></li>
+                                            {% endif %}
+											<li class="breadcrumb-item active" aria-current="page"><a>{{ book.title }}</a></li>
+										</ol>
+									</nav>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="content__main">
+			<div class="book">
+						
+				<div class="row">
+					<div class="col-lg-1">
+
+					</div>
+					<div class="col-lg-3">
+						<img class="book__img" src="{{ book.cover.url }}" alt="Обложка книги">
+					</div>
+					<div class="col-lg-5">
+						<div class="row flex-column">
+							<div class="col-lg">
+								<div class="book__name">
+									<h3>{{ book.title }}</h3>
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="book__info-item">
+									Автор: {{ book.author }}
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="book__info-item">
+									Раздел: {{ book.sections.name }}
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="book__info-item">
+									<div class="low-text">
+										Страниц: {{ book.pages }}
+									</div>
+								</div>
+							</div>
+							<div class="col-lg">
+								<div class="book__info-item">
+									<div class="low-text">
+										Год выпуска: {{ book.year_of_release }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+				<div class="row">
+					<div class="col-lg-1">
+
+					</div>
+					<div class="col-lg-10">
+						<div class="book__annotation">
+							<div class="book_annotation__text">
+								{{ book.description }}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="rating__estimate">
+					<div class="row">
+						<div class="col-lg-1">
+
+						</div>
+						<div class="col-lg-1">
+							<div class="rating__estimate__text">
+								Оцените:
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="rating__estimete__stars">
+									<input type="radio" id="star-5" name="rating" value="5">
+									<label for="star-5" title="5"></label>
+									<input type="radio" id="star-4" name="rating" value="4">
+									<label for="star-4" title="4"></label>
+									<input type="radio" id="star-3" name="rating" value="3">
+									<label for="star-3" title="3"></label>
+									<input type="radio" id="star-2" name="rating" value="2">
+									<label for="star-2" title="2"></label>
+									<input type="radio" id="star-1" name="rating" value="1">
+									<label for="star-1" title="1"></label>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="button">
+					<div class="row">
+						<div class="col-lg-1"></div>
+						<div class="col-lg-2">
+							<a href="{{ book.file_book.url }}" class="btn btn-secondary" role="button" target="_blank">Открыть книгу</a>
+						</div>
+						<div class="col-lg-2 ml-auto">
+							<a href="{{ book.file_book.url }}" target="_blank" download="{{ book.title }}.pdf" class="btn btn-secondary ml-lg-5" role="button">Скачать книгу</a>
+						</div>
+						<div class="col-lg-1"></div>
+					</div>
+				</div>
+				<div class="warning__down">
+					<div class="row">
+						<div class="col-lg-4 mx-auto">
+							<div class="warning__down__text text-uppercase">
+								Скачать книги можно, только в pdf формате
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+
+
+		</div>
+					
+					
+		</div>
+	</section>
+{% endblock %}

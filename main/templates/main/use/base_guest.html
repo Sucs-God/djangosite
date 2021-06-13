@@ -1,0 +1,166 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static "main/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "main/css/style.css" %}">
+    <title>Учебные материалы по ЯП Python</title>
+  </head>
+  <body>
+
+    {% block popup %}{% endblock %}
+
+	<header id="header" class="header">
+		<div class="container">
+			<div class="row">
+
+				<div class="Logo col-lg-2">
+					<a href="{% url 'main' %}"><img src="{% static "main/img/svg/Logo.svg" %}" alt="Учебные материалы по ЯП Python"></a>
+				</div>
+
+				<div class="Navigator col-lg-5" id="navbar">
+					<h1>Учебные материалы по ЯП Python</h1>
+					<nav>
+						<ul class="menu d-flex justify-content-between">
+							<li class="menu__item">
+								<a class="btn btn-secondary" href="{% url 'main' %}" role="button">Главная</a>
+							</li>
+
+							<li class="menu__item">
+								<div class="btn-group">
+									<a class="btn btn-secondary" href="/catalog" role="button">Каталог книг</a>
+									<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="{% url 'section_url' 'beginner' %}">Для начинающих</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="{% url 'section_url' 'pro' %}">Для продвинутых</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="{% url 'section_url' 'directory' %}">Справочники</a>
+									</div>
+								</div>
+							</li>
+
+							<li class="menu__item">
+								<a class="btn btn-secondary" href="{% url 'about' %}" role="button">О сайте</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+
+			</div>
+		</div>
+	</header>
+
+    {% block content %}{% endblock %}
+
+	<footer id="footer" class="footer">
+
+		<div class="container">
+
+			<div class="row">
+
+
+						<div class="col-lg-2">
+
+							<div class="subsection">
+
+									<h4 class="subsection__name">Разделы</h4>
+
+
+									<ol class="subsection__content">
+										<li class="subsection__content__item">
+											<a href="{% url 'main' %}">Главная</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="{% url 'catalog' %}">Каталог книг</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="{% url 'section_url' 'beginner' %}">Для начинающих</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="{% url 'section_url' 'pro' %}">Для продвинутых</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="{% url 'section_url' 'directory' %}">Справочники</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="{% url 'about' %}">О сайте</a>
+										</li>
+									</ol>
+
+
+							</div>
+
+						</div>
+
+
+
+						<div class="col-lg-5 ml-auto mr-auto">
+
+							<div class="subsection">
+
+								<h4 class="subsection__name">Способы связи</h4>
+
+								<ol class="subsection__content">
+									<li class="subsection__content__item">E-mail:  kusfus@yandex.ru</li>
+									<li class="subsection__content__item">Адрес: Россия, Волгоградская обл., г. Жирновск, ул. Ленина 1А</li>
+								</ol>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-3 ml-auto">
+
+							<div class="subsection">
+
+								<h4 class="subsection__name">Мы в соц. сетях</h4>
+
+								<ol class="subsection__block d-flex justify-content-center">
+									<li class="subsection__block__img">
+										<a href="https://vk.com/egor1268" target="_blank"><img src="{% static "main/img/svg/social network/VK.svg" %}" alt="VK"></a>
+									</li>
+									<li class="subsection__block__img">
+										<a href="https://t.me/sucs_god" target="_blank"><img src="{% static "main/img/svg/social network/Telegram.svg" %}" alt="Telegram"></a>
+									</li>
+									<li class="subsection__block__img">
+										<a href="https://ru-ru.facebook.com/" target="_blank"><img src="{% static "main/img/svg/social network/Facebook.svg" %}" alt="Facebook"></a>
+									</li>
+									<li class="subsection__block__img">
+										<a href="https://twitter.com/?lang=ru" target="_blank"><img src="{% static "main/img/svg/social network/Twitter.svg" %}" alt="Twitter"></a>
+									</li>
+								</ol>
+							</div>
+
+						</div>
+
+
+
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<h5 class="trademark">© 2020 «Vecherin»</h5>
+				</div>
+			</div>
+
+		</div>
+
+	</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

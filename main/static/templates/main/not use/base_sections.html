@@ -1,0 +1,83 @@
+{% extends 'main/use/base_guest.html' %}
+{% load static %}
+
+
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mx-auto">
+				<div class="warning">
+					<div class="warning__text">
+						Все книги предоставлены исключительно с целью ознакомления
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<section id="content" class="content">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="bread__crumb">
+						<div class="container">
+
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb">
+											<li class="breadcrumb-item" aria-current="page"><a href="{% url 'main' %}">Главная</a></li>
+											<li class="breadcrumb-item" aria-current="page"><a href="{% url 'catalog' %}">Каталог книг</a></li>
+											{% if sections.name == 'Для начинающих' %}
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'section' section.url %}">{{ section.name }}</a></li>
+                                            {% elif sections.name == 'Для продвинутых' %}
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'section' section.url %}">{{ section.name }}</a></li>
+                                            {% elif sections.name == 'Справочник' %}
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'section' section.url %}">{{ section.name }}</a></li>
+                                            {% endif %}
+										</ol>
+									</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="content__main">
+			<div class="row">
+				<div class="col-lg-12">
+                    {% block name_sections %}{% endblock %}
+				</div>
+			</div>
+
+            <div class="row">
+				<div class="col-lg-12">
+					<div class="title">
+						<p class="title__text">
+                            {% block text_sections %}{% endblock %}
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__book">
+
+                <div class="row justify-content-center">
+                    {% for book in book_list %}
+                        {% block books_section %}{% endblock %}
+                    {% endfor %}
+                </div>
+
+
+
+			</div>
+
+
+		</div>
+
+
+		</div>
+	</section>
+{% endblock %}
+

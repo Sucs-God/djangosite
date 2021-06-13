@@ -1,0 +1,205 @@
+{% extends 'main/use/base_guest.html' %}
+{% load static %}
+
+
+{% block popup %}
+	<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<form>
+
+						<div class="form-group">
+							<label for="inputName">Имя</label>
+							<input type="text" class="form-control" id="inputName"
+							aria-describedby="nameHelp" placeholder="Имя" required>
+							<small id="nameHelp" class="form-text text-muted">Введите ваше Имя</small>
+						</div>
+
+						<div class="form-group">
+							<label for="inputSurname">Фамилия</label>
+							<input type="text" class="form-control" id="inputSurname"
+							aria-describedby="surnameHelp" placeholder="Фамилия" required>
+							<small id="surnameHelp" class="form-text text-muted">Введите вашу Фамилию</small>
+						</div>
+
+						<div class="form-group">
+							<label for="inputEmail">Электронная почта</label>
+							<input type="email" class="form-control" id="inputEmail"
+							aria-describedby="emailHelp" placeholder="Email" required>
+							<small id="emailHelp" class="form-text text-muted">Введите вашу электронную почту</small>
+						</div>
+
+						<div class="form-group">
+							<label for="inputDataBorn">Дата рождения</label>
+							<input type="date" class="form-control" id="inputDataBorn"
+							aria-describedby="dataBornHelp" placeholder="Дата рождения" required>
+							<small id="dataBornHelp" class="form-text text-muted">Введите вашу дату рождения</small>
+						</div>
+
+						<div class="form-group">
+							<label for="inputPass">Пароль</label>
+							<input type="password" class="form-control" id="inputPass"
+							placeholder="Password" minlength="10" required>
+							<small id="passHelp" class="form-text text-muted">Пароль должен содержать 10 символов</small>
+						</div>
+
+						<div class="form-group">
+							<label for="inputAcceptPass">Подтвердите пароль</label>
+							<input type="password" class="form-control" id="inputAcceptPass"
+							placeholder="Accept Password" minlength="10" required>
+							<small id="passAcceptHelp" class="form-text text-muted">Повторите пароль</small>
+						</div>
+
+						<div class="modal-footer">
+
+							<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#singInModal" data-dismiss="modal">Войти</button>
+							<button type="submit" class="btn btn-secondary">Зарегистрироваться</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="modal fade" id="singInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<form>
+
+						<div class="form-group">
+							<label for="inputEmail">Электронная почта</label>
+							<input type="email" class="form-control" id="inputEmail"
+							aria-describedby="emailHelp" placeholder="Email" required>
+							<small id="emailHelp" class="form-text text-muted">Введите вашу электронную почту</small>
+						</div>
+
+						<div class="form-group">
+							<label for="inputPass">Пароль</label>
+							<input type="password" class="form-control" id="inputPass"
+							placeholder="Password" required>
+							<small id="passHelp" class="form-text text-muted">Пароль должен содержать 10 символов</small>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#registrationModal" data-dismiss="modal">Регистрация</button>
+							<button type="submit" class="btn btn-secondary">Войти</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		  </div>
+		</div>
+	  </div>
+{% endblock %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mx-auto">
+				<div class="warning">
+					<div class="warning__text">
+						Все книги предоставлены исключительно с целью ознакомления
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<section id="content" class="content">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="bread__crumb">
+						<div class="container">
+
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb">
+											<li class="breadcrumb-item" aria-current="page"><a href="{% url 'main' %}">Главная</a></li>
+											<li class="breadcrumb-item" aria-current="page"><a href="{% url 'catalog' %}">Каталог книг</a></li>
+											<li class="breadcrumb-item active" aria-current="page"><a>{{ section_item.name }}</a></li>
+										</ol>
+									</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="content__main">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="name__sections">{{ section_item.name }}</h2>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-lg-12">
+					<div class="title">
+						<p class="title__text">
+							{{ section_item.description }}
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="card__book">
+
+
+
+                <div class="row justify-content-center">
+                    <div class="card-group">
+                    {% for book in book_list %}
+                        <div class="col-lg-3 d-flex align-items-stretch">
+                            <div class="card">
+                                <img src="{{ book.cover.url }}" class="card-img-top" height="325px" width="225px">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ book.title }}</h5>
+                                    <p class="card-text author">Автор: {{ book.author }}</p>
+                                    <p class="card-text section__book" >Раздел: {{ book.sections.name }}</p>
+                                    <p class="card-text rating">"Оценка"</p>
+                                    <p class="card-text number-of-pages">Страниц: {{ book.pages }}</p>
+                                    <a href="{% url 'book_detail' book.sections.url book.url %}" class="card-link">Посмотреть</a>
+                                </div>
+                                <div class="card-footer year-of-issue">
+                                        {{ book.year_of_release }}
+                                    </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+
+
+
+			</div>
+
+
+		</div>
+
+
+		</div>
+	</section>
+{% endblock %}
+

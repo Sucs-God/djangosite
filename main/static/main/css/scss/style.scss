@@ -1,0 +1,559 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Спецификация */
+body {
+  font-family: 'Roboto';
+  background: #FAFAFA;
+}
+
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+#content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Первый экран */
+#header {
+  background: #D6D6B1;
+  color: #494331;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.btn-secondary {
+  background: #878472;
+  color: #D6D6B1;
+}
+
+h1 {
+  font-size: 26px;
+  text-align: center;
+}
+
+.menu {
+  padding-top: 24px;
+}
+
+.menu__item a {
+  font-size: 16px;
+  color: #D6D6B1;
+  padding: 6px 15px 6px 15px;
+}
+
+.Logo, .Navigator {
+  padding-top: 10px;
+}
+
+.Logo img {
+  width: auto;
+}
+
+.dropdown-menu {
+  background: #878472;
+}
+
+.menu__item button {
+  color: #D6D6B1;
+}
+
+.sing a {
+  color: #494331;
+}
+
+.sing a:hover {
+  text-decoration: underline;
+}
+
+.sing__item {
+  margin: 0 5px;
+}
+
+/* Второй экран */
+.breadcrumb {
+  background: #FAFAFA;
+  font-size: 12px;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+.warning {
+  margin-top: 0.5em;
+  border: 1px solid #D6D6B1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0.3em 0.5em;
+}
+
+.warning__text {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+}
+
+
+.account-info__avatar {
+  width: 100%;
+  border: 1px solid #D6D6B1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.account-info__contact-information__item {
+  margin-bottom: 2em;
+}
+
+.account-info__change__item {
+  margin-bottom: 2em;
+}
+
+.account-info__change__item a {
+  color: #000000;
+}
+
+.account-info__change__item :hover {
+  color: #DE541E;
+}
+
+.content__main {
+  border: 1px solid #D6D6B1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+.title__text {
+  font-size: 16px;
+  padding-top: 25px;
+  width: 85%;
+  margin: 0 auto;
+  line-height: 1.5;
+  padding-bottom: 25px;
+}
+
+.sections {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.name__sections {
+  text-align: center;
+}
+
+.section {
+  display: block;
+  color: #000000;
+  width: 85%;
+  margin-top: 1em;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #D6D6B1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.section:hover {
+  color: #3F3F37;
+  -webkit-box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+.toolbar {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.card__book {
+  padding-top: 2em;
+  margin: 2em;
+}
+
+.number-of-pages {
+  font-size: 10px;
+}
+
+.rating {
+  text-align: center;
+}
+
+.year-of-issue {
+  text-align: center;
+  font-size: 12px;
+
+}
+
+.content__main__book {
+  margin: 2em;
+  border: 1px solid #D6D6B1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  padding-top: 1em;
+}
+.card{
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 2em;
+  background: #878472;
+  color: #D6D6B1;
+}
+.card:hover{
+  -webkit-box-shadow: 7px 7px 20px rgba(125, 97, 97, 0.5);
+          box-shadow: 7px 7px 20px rgba(125, 97, 97, 0.5);
+}
+
+
+.card-body a {
+  color: #D6D6B1;
+}
+
+.card-body a:hover {
+  color: #DE541E;
+}
+
+.card-title{
+  color: #F4FAEB;
+}
+
+.section__block {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.section__block__name {
+  margin-bottom: 1em;
+}
+
+.book__name {
+  margin-top: 1em;
+  background: #3F3F37;
+  border-radius: 4px;
+  padding: 8px 3px 3px 8px;
+}
+
+.book__name h3 {
+  color: #D6D6B1;
+  line-height: 1.3;
+}
+
+.book__img {
+  width: 100%;
+  border: 1px solid #D6D6B1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.book__rating {
+  border: 1px solid #D6D6B1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  height: 47.93%;
+  background: #D6D6B1;
+}
+
+.book__rating h3 {
+  margin: 0 auto;
+}
+
+.book__annotation {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background: #C4C4C4;
+  border-radius: 2px;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+.rating__estimate {
+  margin-bottom: 2em;
+}
+
+.rating__estimate__text {
+  font-size: 16px;
+}
+
+.rating__estimate__stars {
+  height: 100%;
+}
+
+.book__info-item {
+  margin-top: 2em;
+  font-size: 14px;
+}
+
+.book__info-item .low-text {
+  font-size: 12px;
+}
+
+.button {
+  margin: 2em 0;
+}
+
+.warning__down {
+  margin-bottom: 2em;
+}
+
+.warning__down__text {
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.map{
+  padding: 25px;
+}
+
+/* Футер */
+footer {
+  background: #3F3F37;
+}
+
+.subsection {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+}
+
+.subsection__name {
+  font-size: 16px;
+  color: #D6D6B1;
+  text-align: center;
+}
+
+.subsection__name:hover {
+  color: #fff;
+}
+
+.subsection1 {
+  padding-top: 1em;
+}
+
+.subsection1__name1 {
+  font-size: 18px;
+}
+
+.subsection1__name1__Soc {
+  padding-bottom: 0.5em;
+  font-size: 18px;
+  text-align: center;
+}
+
+.subsection__content {
+  padding-top: 14px;
+}
+
+.subsection__content__item {
+  padding-bottom: 10px;
+  color: #878472;
+  font-size: 14px;
+}
+
+.subsection__content__item a {
+  color: #878472;
+}
+
+.subsection__content__item a:hover {
+  color: #DE541E;
+  text-decoration: underline;
+}
+
+.subsection__block__img {
+  padding-right: 10px;
+}
+
+.subsection__block__img:hover {
+  mix-blend-mode: hard-light;
+}
+
+.trademark {
+  color: #878472;
+  text-align: center;
+}
+
+.contact__information__text {
+  padding: 5px;
+}
+
+/* Медиа-запросы */
+@media screen and (max-width: 992px) {
+  .Logo {
+    display: none;
+  }
+  .sing {
+    margin-top: 30px;
+  }
+}
+
+/* Рейтинг оценки */
+.rating__estimete__stars {
+  overflow: hidden;
+  width: 50%;
+  margin: 0;
+}
+
+.rating__estimete__stars:not(:checked) > input {
+  display: none;
+}
+
+.rating__estimete__stars:not(:checked) > label {
+  float: right;
+  padding: 0;
+  cursor: pointer;
+  font-size: 18px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+
+.rating__estimete__stars:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating__estimete__stars > input:checked ~ label {
+  color: #DE541E;
+  text-shadow: 1px 1px #DE541E;
+}
+
+.rating__estimete__stars:not(:checked) > label:hover,
+.rating__estimete__stars:not(:checked) > label:hover ~ label {
+  color: #DE541E;
+}
+
+.rating__estimete__stars > input:checked + label:hover,
+.rating__estimete__stars > input:checked + label:hover ~ label,
+.rating__estimete__stars > input:checked ~ label:hover,
+.rating__estimete__stars > input:checked ~ label:hover ~ label,
+.rating__estimete__stars > label:hover ~ input:checked ~ label {
+  color: #DE541E;
+  text-shadow: 1px 1px #DE541E;
+}
+
+.rating__estimete__stars > label:active {
+  position: relative;
+}
+
+.rating__estimate__stars__block {
+  background: #F4FAEB;
+}
+/*# sourceMappingURL=style.css.map */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+        flex: 0 0 auto;
+    }
+
+    .content {
+        flex: 1 0 auto;
+    }
+
+    footer {
+        flex: 0 0 auto;
+    }
+}

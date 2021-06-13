@@ -1,0 +1,35 @@
+{% extends 'main/not use/base_sections.html' %}
+{% load static %}
+
+
+{% block bread_sections %}
+    <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'beginner' %}">Для начинающих</a></li>
+{% endblock %}
+
+{% block name_sections %}
+<h2 class="name__sections">Для начинающих</h2>
+{% endblock %}
+
+{% block text_sections %}
+{{ book }}
+{% endblock %}
+{% block books_section %}
+{% if book.sections.name == 'Для начинающих' %}
+    <div class="col-lg-3">
+        <div class="card">
+            <img src="{% static 'main/img/svg/starter.svg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <p class="card-text author">Автор: {{ book.author }}</p>
+                <p class="card-text section__book" >Раздел: {{ book.sections.name }}</p>
+                <p class="card-text rating">"Оценка"</p>
+                <p class="card-text number-of-pages">Страниц: {{ book.pages }}</p>
+                <a href="" class="card-link">Посмотреть</a>
+                <div class="card-footer year-of-issue">
+                    {{ book.year_of_release }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Учебные материалы по ЯП Python</title>
+  </head>
+  <body>
+	<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<form>
+						
+						<div class="form-group">
+							<label for="inputName">Имя</label>
+							<input type="text" class="form-control" id="inputName"
+							aria-describedby="nameHelp" placeholder="Имя" required>
+							<small id="nameHelp" class="form-text text-muted">Введите ваше Имя</small>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputSurname">Фамилия</label>
+							<input type="text" class="form-control" id="inputSurname"
+							aria-describedby="surnameHelp" placeholder="Фамилия" required>
+							<small id="surnameHelp" class="form-text text-muted">Введите вашу Фамилию</small>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputEmail">Электронная почта</label>
+							<input type="email" class="form-control" id="inputEmail"
+							aria-describedby="emailHelp" placeholder="Email" required>
+							<small id="emailHelp" class="form-text text-muted">Введите вашу электронную почту</small>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputDataBorn">Дата рождения</label>
+							<input type="date" class="form-control" id="inputDataBorn"
+							aria-describedby="dataBornHelp" placeholder="Дата рождения" required>
+							<small id="dataBornHelp" class="form-text text-muted">Введите вашу дату рождения</small>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputPass">Пароль</label>
+							<input type="password" class="form-control" id="inputPass"
+							placeholder="Password" minlength="10" required>
+							<small id="passHelp" class="form-text text-muted">Пароль должен содержать 10 символов</small>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputAcceptPass">Подтвердите пароль</label>
+							<input type="password" class="form-control" id="inputAcceptPass"
+							placeholder="Accept Password" minlength="10" required>
+							<small id="passAcceptHelp" class="form-text text-muted">Повторите пароль</small>
+						</div>
+
+						<div class="modal-footer">
+							
+							<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#singInModal" data-dismiss="modal">Войти</button>
+							<button type="submit" class="btn btn-secondary">Зарегистрироваться</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="modal fade" id="singInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<form>
+						
+						<div class="form-group">
+							<label for="inputEmail">Электронная почта</label>
+							<input type="email" class="form-control" id="inputEmail"
+							aria-describedby="emailHelp" placeholder="Email" required>
+							<small id="emailHelp" class="form-text text-muted">Введите вашу электронную почту</small>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputPass">Пароль</label>
+							<input type="password" class="form-control" id="inputPass"
+							placeholder="Password" required>
+							<small id="passHelp" class="form-text text-muted">Пароль должен содержать 10 символов</small>
+						</div>
+						
+						<div class="modal-footer">	
+							<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#registrationModal" data-dismiss="modal">Регистрация</button>
+							<button type="submit" class="btn btn-secondary">Войти</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+
+
+
+	<header id="header" class="header">
+		<div class="container">
+			<div class="row">
+				
+				<div class="Logo col-lg-2">
+					<a href="index.html"><img src="img/svg/Logo.svg" alt="Учебные материалы по ЯП Python"></a>
+				</div>
+				
+				<div class="Navigator col-lg-5" id="navbar">
+					<h1>Учебные материалы по ЯП Python</h1>
+					<nav>
+						<ul class="menu d-flex justify-content-between">
+							<li class="menu__item">
+								<a class="btn btn-secondary" href="index.html" role="button">Главная</a>
+							</li>
+			
+							<li class="menu__item">
+								<div class="btn-group">
+									<a class="btn btn-secondary" href="catolog.html" role="button">Каталог книг</a>
+									<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Для начинающих</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Для продвинутых</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Справочники</a>				  
+									</div>
+								</div>
+							</li>
+
+							<li class="menu__item">
+								<a class="btn btn-secondary" href="../use/about_site.html" role="button">О сайте</a>
+							</li>
+						</ul>
+					</nav>	
+				</div>
+
+				<div class="col-lg-3 ml-auto">
+					<ul class="sing d-flex justify-content-around">
+						<li class="sing__item"><a href="#" data-toggle="modal" data-target="#singInModal">Вход</a></li>
+						<li class="sing__item"><a href="#" data-toggle="modal" data-target="#registrationModal">Регистрация</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mx-auto">
+				<div class="warning">
+					<div class="warning__text">
+						Все книги предоставлены исключительно с целью ознакомления
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+		
+
+
+	<section id="content" class="content">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="bread__crumb">
+						<div class="container">
+							
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb">
+											<li class="breadcrumb-item" aria-current="page"><a href="index.html">Главная</a></li>
+											<li class="breadcrumb-item" aria-current="page"><a href="catolog.html">Каталог книг</a></li>
+											<li class="breadcrumb-item active" aria-current="page"><a>Для продвинутых</a></li>
+										</ol>
+									</nav>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="content__main">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="name__sections">Для продвинутых</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title">
+						<p class="title__text">
+							Данный раздел предназначен для тех, кто уже знает основы языка Python, но хочет знать больше.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card__book">
+			
+
+		
+			<div class="row justify-content-center">
+				
+				<div class="col-lg-2">
+					<div class="card">
+						<img src="img/svg/starter.svg" class="card-img-top" alt="...">
+						<div class="card-body">
+						  <h5 class="card-title">"Название книги"</h5>
+						  <p class="card-text author">"Автор"</p>
+						  <p class="card-text section__book" >Раздел: "раздел"</p>
+						  <p class="card-text rating">"Оценка"</p>
+						  <p class="card-text number-of-pages">"Страниц"</p>
+						  <a href="#" class="card-link">Посмотреть</a>
+						  <div class="card-footer year-of-issue">
+							  "Год выпуска"
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="card">
+						<img src="img/svg/starter.svg" class="card-img-top" alt="...">
+						<div class="card-body">
+						  <h5 class="card-title">"Название книги"</h5>
+						  <p class="card-text author">"Автор"</p>
+						  <p class="card-text section__book" >Раздел: "раздел"</p>
+						  <p class="card-text rating">"Оценка"</p>
+						  <p class="card-text number-of-pages">"Страниц"</p>
+						  <a href="#" class="card-link">Посмотреть</a>
+						  <div class="card-footer year-of-issue">
+							  "Год выпуска"
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="card">
+						<img src="img/svg/starter.svg" class="card-img-top" alt="...">
+						<div class="card-body">
+						  <h5 class="card-title">"Название книги"</h5>
+						  <p class="card-text author">"Автор"</p>
+						  <p class="card-text section__book" >Раздел: "раздел"</p>
+						  <p class="card-text rating">"Оценка"</p>
+						  <p class="card-text number-of-pages">"Страниц"</p>
+						  <a href="#" class="card-link">Посмотреть</a>
+						  <div class="card-footer year-of-issue">
+							  "Год выпуска"
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="card">
+						<img src="img/svg/starter.svg" class="card-img-top" alt="...">
+						<div class="card-body">
+						  <h5 class="card-title">"Название книги"</h5>
+						  <p class="card-text author">"Автор"</p>
+						  <p class="card-text section__book" >Раздел: "раздел"</p>
+						  <p class="card-text rating">"Оценка"</p>
+						  <p class="card-text number-of-pages">"Страниц"</p>
+						  <a href="#" class="card-link">Посмотреть</a>
+						  <div class="card-footer year-of-issue">
+							  "Год выпуска"
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="card">
+						<img src="img/svg/starter.svg" class="card-img-top" alt="...">
+						<div class="card-body">
+						  <h5 class="card-title">"Название книги"</h5>
+						  <p class="card-text author">"Автор"</p>
+						  <p class="card-text section__book" >Раздел: "раздел"</p>
+						  <p class="card-text rating">"Оценка"</p>
+						  <p class="card-text number-of-pages">"Страниц"</p>
+						  <a href="#" class="card-link">Посмотреть</a>
+						  <div class="card-footer year-of-issue">
+							  "Год выпуска"
+						  </div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			
+				<div class="row">
+					<div class="col-lg-2 mx-auto">
+						<div class="toolbar">
+							<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+								
+								<div class="btn-group mx-auto" role="group" aria-label="First group">
+									<a class="btn btn-secondary" role="button"><</a>
+									<a class="btn btn-secondary active" role="button">1</a>
+									<a class="btn btn-secondary" role="button">2</a>
+									  <a class="btn btn-secondary" role="button">></a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			
+
+			</div>
+
+
+		</div>
+					
+					
+		</div>
+	</section>
+
+	<footer id="footer" class="footer">
+		
+		<div class="container">
+
+			<div class="row">
+					
+						
+						<div class="col-lg-2">
+							
+							<div class="subsection">
+
+									<h4 class="subsection__name">Разделы</h4>
+								
+								
+									<ol class="subsection__content">
+										<li class="subsection__content__item">
+											<a href="index.html">Главная</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="catolog.html">Каталог книг</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="#">Для начинающих</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="#">Для продвинутых</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="#">Справочники</a>
+										</li>
+										<li class="subsection__content__item">
+											<a href="../use/about_site.html">О сайте</a>
+										</li>
+									</ol>
+								
+								
+							</div>
+						
+						</div>
+		
+						<div class="col-lg-2">
+							
+							<div class="subsection">
+								
+								<h4 class="subsection__name">Ваш аккаунт</h4>
+								
+								<ol class="subsection__content">
+									<li class="subsection__content__item"><a href="#">Войти</a></li>
+									<li class="subsection__content__item"><a href="#">Регистрация</a></li>
+								</ol>
+	
+							</div>
+	
+						</div>
+						
+						<div class="col-lg-5">
+							
+							<div class="subsection">
+	
+								<h4 class="subsection__name">Способы связи</h4>
+								
+								<ol class="subsection__content">
+									<li class="subsection__content__item">E-mail:  kusfus@yandex.ru</li>
+									<li class="subsection__content__item">Адрес: Россия, Волгоградская обл., г. Жирновск, ул. Ленина 1А</li>
+								</ol>
+	
+							</div>
+	
+						</div>
+		
+						<div class="col-lg-3">
+							
+							<div class="subsection">
+	
+								<h4 class="subsection__name">Мы в соц. сетях</h4>
+								
+								<ol class="subsection__block d-flex justify-content-center">
+									<li class="subsection__block__img">
+										<a href="#"><img src="img/svg/social network/VK.svg" alt="VK"></a>
+									</li>
+									<li class="subsection__block__img">
+										<a href="#"><img src="img/svg/social network/Telegram.svg" alt="Telegram"></a>
+									</li>
+									<li class="subsection__block__img">
+										<a href="#"><img src="img/svg/social network/Facebook.svg" alt="Facebook"></a>
+									</li>
+									<li class="subsection__block__img">
+										<a href="#"><img src="img/svg/social network/Twitter.svg" alt="Twitter"></a>
+									</li>
+								</ol>
+							</div>
+	
+						</div>
+	
+					
+				
+				
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<h5 class="trademark">© 2020 «Vecherin»</h5>
+				</div>
+			</div>
+
+		</div>
+
+	</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
